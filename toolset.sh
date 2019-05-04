@@ -201,6 +201,7 @@ if $(init_installation_if_needed "${TOOLSET_FULL_PATH}/uboot-${UBOOT_VER}"); the
 
         cp u-boot-sunxi-with-spl.bin "${TOOLSET_FULL_PATH}/uboot-${UBOOT_VER}"/u-boot-sunxi-with-spl-for-opi-pc-plus.bin
 
+        make distclean
         ARCH=arm CROSS_COMPILE="${cross_compiler_32bit}" make orangepi_zero_defconfig
         ARCH=arm CROSS_COMPILE="${cross_compiler_32bit}" PYTHON=python make -j $(number_of_cores)
 
@@ -216,7 +217,10 @@ if $(init_installation_if_needed "${TOOLSET_FULL_PATH}/uboot-${UBOOT_VER}"); the
     popd
 
     pushd "${TOOLSET_FULL_PATH}/uboot-${UBOOT_VER}"
-        finalise_installation "${dir_with_32bit_toolchain}" "u-boot-${UBOOT_VER}" uboot-env
+        finalise_installation "${dir_with_32bit_toolchain}" \
+                              "${dir_with_64bit_toolchain}" \
+                              "u-boot-${UBOOT_VER}" \
+                              uboot-env
     popd
 fi
 
