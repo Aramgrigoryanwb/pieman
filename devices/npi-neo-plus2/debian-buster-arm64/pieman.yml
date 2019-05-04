@@ -1,6 +1,6 @@
 # Maintainer: Evgeny Golyshev <eugulixes@gmail.com>
 
-debian-buster-armhf:
+debian-buster-arm64:
   repos:
   - http://deb.debian.org/debian
   boot:
