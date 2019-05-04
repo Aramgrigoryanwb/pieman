@@ -174,14 +174,14 @@ if $(init_installation_if_needed "${TOOLSET_FULL_PATH}/uboot-${UBOOT_VER}"); the
         info "fetching 32-bit cross-toolchain for building Das U-Boot"
         wget "https://releases.linaro.org/components/toolchain/binaries/7.4-2019.02/arm-linux-gnueabihf/${dir_with_32bit_toolchain}.tar.xz" -O "${dir_with_32bit_toolchain}.tar.xz"
 
-        info "unpacking 32-bit archive with toolchain for building Das U-Boot"
+        info "unpacking archive with 32-bit toolchain for building Das U-Boot"
         tar xJf "${dir_with_32bit_toolchain}.tar.xz"
         rm "${dir_with_32bit_toolchain}.tar.xz"
 
         info "fetching 64-bit cross-toolchain for building Das U-Boot"
         wget "https://releases.linaro.org/components/toolchain/binaries/7.4-2019.02/aarch64-linux-gnu/${dir_with_64bit_toolchain}.tar.xz" -O "${dir_with_64bit_toolchain}.tar.xz"
 
-        info "unpacking 64-bit archive with toolchain for building Das U-Boot"
+        info "unpacking archive with 64-bit toolchain for building Das U-Boot"
         tar xJf "${dir_with_64bit_toolchain}.tar.xz"
         rm "${dir_with_64bit_toolchain}.tar.xz"
 
@@ -206,6 +206,7 @@ if $(init_installation_if_needed "${TOOLSET_FULL_PATH}/uboot-${UBOOT_VER}"); the
 
         cp u-boot-sunxi-with-spl.bin "${TOOLSET_FULL_PATH}/uboot-${UBOOT_VER}"/u-boot-sunxi-with-spl-for-opi-zero.bin
 
+        make distclean
         ARCH=aarch64 CROSS_COMPILE="${cross_compiler_64bit}" make nanopi_neo_plus2_defconfig
         ARCH=aarch64 CROSS_COMPILE="${cross_compiler_64bit}" PYTHON=python make -j $(number_of_cores)
 
