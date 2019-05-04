@@ -227,6 +227,7 @@ Editing the `PIEMAN_UTILS_DIR` environment variable is necessary to run the test
 
 |                                                                                                                     | <sub>Alpine 3.9</sub> | <sub>Debian 10 «Buster»</sub> | <sub>Devuan 1 «Jessie»</sub> | <sub>Kali Linux Rolling</sub>   |<sub>Raspbian 9 «Stretch»</sub> | <sub>Ubuntu 16.04 «Xenial Xerus»</sub> | <sub>Ubuntu 18.04 «Bionic Beaver»</sub> |
 |---------------------------------------------------------------------------------------------------------------------|:---------------------:|:-----------------------------:|:----------------------------:|:-------------------------------:|:-------------------------------:|:--------------------------------------:|:---------------------------------------:|
+| <sub>NanoPi <a href="http://nanopi.io/nanopi-neo-plus2.html">NEO Plus2</a></sub>                                    |                       | <sub>64bit</sub>              |                              |                                 |                                 |                                        |                                         |
 | <sub>Orange Pi <a href="http://orangepi.org/orangepipcplus/">PC Plus</a></sub>                                      |                       | <sub>32bit</sub>              |                              | <sub>32bit</sub>                |                                 |                                        |                                         |
 | <sub>Orange Pi <a href="http://www.orangepi.org/orangepizero/">Zero</a></sub>                                       |                       | <sub>32bit</sub>              |                              | <sub>32bit</sub>                |                                 |                                        |                                         |
 | <sub>Raspberry Pi <a href="https://www.raspberrypi.org/products/raspberry-pi-1-model-b/">Model B and B+</a></sub>   |                       |                               |                              |                                 | <sub>32bit</sub>                |                                        |                                         |
@@ -249,14 +250,15 @@ The operating system of the target image is specified via the `OS` environment v
 
 The device the target image is created for is specified via the `DEVICE` environment variable. The next table maps full names of the supported devices to their short name intended for using as values of `DEVICE`.
 
-| Full name                   | Short name  |
-|-----------------------------|-------------|
-| Orange Pi PC Plus           | opi-pc-plus |
-| Orange Pi Zero              | opi-zero    |
-| Raspberry Pi Model B and B+ | rpi-b       |
-| Raspberry Pi 2 Model B      | rpi-2-b     |
-| Raspberry Pi 3 Model B      | rpi-3-b     |
-| Raspberry Pi Zero           | rpi-zero    |
+| Full name                   | Short name    |
+|-----------------------------|---------------|
+| NanoPi NEO Plus2            | npi-neo-plus2 |
+| Orange Pi PC Plus           | opi-pc-plus   |
+| Orange Pi Zero              | opi-zero      |
+| Raspberry Pi Model B and B+ | rpi-b         |
+| Raspberry Pi 2 Model B      | rpi-2-b       |
+| Raspberry Pi 3 Model B      | rpi-3-b       |
+| Raspberry Pi Zero           | rpi-zero      |
 
 ### Parameters
 

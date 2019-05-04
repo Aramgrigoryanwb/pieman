@@ -211,7 +211,7 @@ if $(init_installation_if_needed "${TOOLSET_FULL_PATH}/uboot-${UBOOT_VER}"); the
         ARCH=aarch64 CROSS_COMPILE="${cross_compiler_64bit}" make nanopi_neo_plus2_defconfig
         ARCH=aarch64 CROSS_COMPILE="${cross_compiler_64bit}" PYTHON=python make -j $(number_of_cores)
 
-        cp u-boot-sunxi-with-spl.bin "${TOOLSET_FULL_PATH}/uboot-${UBOOT_VER}"/u-boot-sunxi-with-spl-for-nanopi-neo-plus2.bin
+        cp u-boot-sunxi-with-spl.bin "${TOOLSET_FULL_PATH}/uboot-${UBOOT_VER}"/u-boot-sunxi-with-spl-for-npi-neo-plus2.bin
 
         cp tools/mkimage "${TOOLSET_FULL_PATH}/uboot-${UBOOT_VER}"
     popd

@@ -297,6 +297,12 @@ case "${BUILD_TYPE}" in
 
     send_request_to_bsc_server FORMATTED_PARTITION_CODE
 
+
+    if [[ "${DEVICE}" == "npi-neo-plus2" ]]; then
+        dd if="${TOOLSET_FULL_PATH}/uboot-${UBOOT_VER}/u-boot-sunxi-with-spl-for-npi-neo-plus2.bin" of="${LOOP_DEV}" bs=1024 seek=8
+        sync
+    fi
+
     if [[ "${DEVICE}" == "opi-pc-plus" ]]; then
         dd if="${TOOLSET_FULL_PATH}/uboot-${UBOOT_VER}/u-boot-sunxi-with-spl-for-opi-pc-plus.bin" of="${LOOP_DEV}" bs=1024 seek=8
         sync
@@ -308,6 +314,10 @@ case "${BUILD_TYPE}" in
     fi
 
     mount "${LOOP_DEV}p1" "${MOUNT_POINT}"
+
+    if [[ "${DEVICE}" == "npi-neo-plus2" ]]; then
+        "${TOOLSET_FULL_PATH}/uboot-${UBOOT_VER}"/mkimage -C none -A arm -T script -d "${PIEMAN_DIR}"/files/npi/boot-neo-plus2.cmd "${BOOT}"/boot.scr
+    fi
 
     if [[ "${DEVICE}" == "opi-pc-plus" ]]; then
         "${TOOLSET_FULL_PATH}/uboot-${UBOOT_VER}"/mkimage -C none -A arm -T script -d "${PIEMAN_DIR}"/files/opi/boot-pc-plus.cmd "${BOOT}"/boot.scr
