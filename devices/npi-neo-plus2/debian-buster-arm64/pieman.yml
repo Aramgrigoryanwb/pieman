@@ -6,7 +6,7 @@ debian-buster-arm64:
   boot:
   - /boot/initrd.img-4.19.0-*-arm64:initrd.img
   - /boot/vmlinuz-4.19.0-*-arm64:zImage
-  - /usr/lib/linux-image-4.19.0-*-arm64/sun50i-h5-nanopi-neo-plus2.dtb
+  - /usr/lib/linux-image-4.19.0-*-arm64/allwinner/sun50i-h5-nanopi-neo-plus2.dtb
   base:
   - gnupg
   includes: systemd
