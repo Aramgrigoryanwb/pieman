@@ -4,13 +4,13 @@ debian-buster-arm64:
   repos:
   - http://deb.debian.org/debian
   boot:
-  - /boot/initrd.img-4.19.0-*-armmp:initrd.img
-  - /boot/vmlinuz-4.19.0-*-armmp:zImage
-  - /usr/lib/linux-image-4.19.0-*-armmp/sun50i-h5-nanopi-neo-plus2.dtb
+  - /boot/initrd.img-4.19.0-*-arm64:initrd.img
+  - /boot/vmlinuz-4.19.0-*-arm64:zImage
+  - /usr/lib/linux-image-4.19.0-*-arm64/sun50i-h5-nanopi-neo-plus2.dtb
   base:
   - gnupg
   includes: systemd
   kernel:
-    package: linux-image-armmp
+    package: linux-image-arm64
   params:
     - ENABLE_GOOGLE_DNS
