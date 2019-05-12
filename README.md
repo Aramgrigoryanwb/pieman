@@ -192,6 +192,8 @@ To create an image based on Ubuntu Xenial for Raspberry Pi 2 with [htop](https:/
 $ sudo env DEVICE=rpi-2-b OS=ubuntu-xenial-armhf INCLUDES=htop,mc ./pieman.sh
 ```
 
+Note that you can also specify the parameters in `.env` file. In this case they will have the higher priority than arguments specified as command line arguments.
+
 The built image will be located in the `build` directory. By the way, you can specify the name of your project via the `PROJECT_NAME` environment variable. You can find details on `DEVICE`, `INCLUDES`, `OS`, `PROJECT_NAME` and other environment variables (called parameters) which help customizing images in the Documentation section.
 
 ## Running tests
