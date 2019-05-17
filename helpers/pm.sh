@@ -82,7 +82,10 @@ install_packages() {
         else
             if  ${DESKTOP_ENV}; then 
                 echo "keyboard-configuration  keyboard-configuration/layout  select  Russian" | chroot_exec debconf-set-selections
-                chroot_exec apt-get -y ${PM_OPTIONS} install "xubuntu-desktop"
+                # add_package_to_includes xfce4
+                # add_package_to_includes gdm3
+                # add_package_to_base_packages xfce4
+                # add_package_to_base_packages gdm3
                 # chroot_exec systemctl enable xfce4
             fi
             # shellcheck disable=SC2086
