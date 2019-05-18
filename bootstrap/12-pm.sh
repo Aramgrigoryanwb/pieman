@@ -119,8 +119,13 @@ if [ ! -z "${includes}" ]; then
     done
 fi
 
-add_package_to_includes xfce4
-add_package_to_includes gdm3
+if ${DESKOP_ENV}; then 
+{
+    add_package_to_includes xfce4
+    add_package_to_includes lxdm
+    add_package_to_includes xfce4-goodies
+}
+fi
 
 if [ ! -z ${INCLUDES} ]; then
     packages_list=`echo ${INCLUDES} | sed -r 's/,/ /g'`
