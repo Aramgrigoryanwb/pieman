@@ -299,7 +299,7 @@ Restricts Pieman to only creating a chroot environment based on the operating sy
 
 ##### XFCE4=""
 
-Determines which desktop environment will be delivered with the image. If parameter is empty then desktop environmet will not be installed.
+If 
 
 ##### LOCALE="en_US.UTF-8"
 
