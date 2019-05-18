@@ -299,7 +299,7 @@ Restricts Pieman to only creating a chroot environment based on the operating sy
 
 ##### XFCE4=""
 
-If 
+If this parameter is set to true, then the image will be compiled together with xfce4 and lxdm. If the parameter is set to false, the desktop environment will not be set.
 
 ##### LOCALE="en_US.UTF-8"
 
