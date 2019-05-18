@@ -80,7 +80,7 @@ install_packages() {
             # shellcheck disable=SC2086
             DEBIAN_FRONTEND=noninteractive chroot_exec apt-get -y -q -o Dpkg::Options::="--force-confdef" -o Dpkg::Options::="--force-confold" ${PM_OPTIONS} install "$@"
         else
-            if  ${DESKTOP_ENV}; then 
+            if  ${XFCE4}; then 
                 echo "keyboard-configuration  keyboard-configuration/layout  select  Russian" | chroot_exec debconf-set-selections
                 # add_package_to_includes xfce4
                 # add_package_to_includes gdm3

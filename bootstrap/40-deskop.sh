@@ -13,6 +13,6 @@
 # You should have received a copy of the GNU General Public License
 # along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
-if  ${DESKTOP_ENV}; then 
+if  ${XFCE4}; then 
     install_exec files/desktop/06xfce4.desktop "${R}"/usr/share/xsessions/06xfce4.desktop
 fi 

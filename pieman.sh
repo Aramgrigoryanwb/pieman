@@ -50,7 +50,7 @@ def_bool_var CREATE_ONLY_CHROOT false
 
 def_var DEVICE "rpi-3-b"
 
-def_bool_var DESKTOP_ENV false
+def_bool_var XFCE4 false
 
 def_var ENABLE_CUSTOM_DNS ""
 
