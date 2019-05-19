@@ -261,12 +261,6 @@ The device the target image is created for is specified via the `DEVICE` environ
 | Raspberry Pi 3 Model B      | rpi-3-b     |
 | Raspberry Pi Zero           | rpi-zero    |
 
-Listed here are the full names of the available desktop environments and their abbreviations, which should be specified in the DESKTOP_ЕNV parameter.
-
-| Full name                   | Short name  |
-|-----------------------------|-------------|
-| XFCE4                       | xfce        |
-
 ### Parameters
 
 #### General
@@ -297,7 +291,7 @@ Specifies the projects location. By default, the directory named `build` is crea
 
 Restricts Pieman to only creating a chroot environment based on the operating system specified via `OS`. The chroot environment is stored in `build/${PROJECT_NAME}/chroot` and can be used immediately or later to reduce the time of building images. See `BASE_DIR`.
 
-##### XFCE4=""
+##### XFCE4="false"
 
 If this parameter is set to true, then the image will be compiled together with xfce4 and lxdm. If the parameter is set to false, the desktop environment will not be set.
 
