@@ -317,6 +317,7 @@ case "${BUILD_TYPE}" in
 
     if [[ "${DEVICE}" == "npi-neo-plus2" ]]; then
         "${TOOLSET_FULL_PATH}/uboot-${UBOOT_VER}"/mkimage -C none -A arm -T script -d "${PIEMAN_DIR}"/files/npi/boot-neo-plus2.cmd "${BOOT}"/boot.scr
+        cp "${TOOLSET_FULL_PATH}/uboot-${UBOOT_VER}"/sun50i-h5-nanopi-neo-plus2.dtb "${BOOT}"
     fi
 
     if [[ "${DEVICE}" == "opi-pc-plus" ]]; then
