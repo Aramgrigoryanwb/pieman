@@ -80,14 +80,15 @@ install_packages() {
             # shellcheck disable=SC2086
             DEBIAN_FRONTEND=noninteractive chroot_exec apt-get -y -q -o Dpkg::Options::="--force-confdef" -o Dpkg::Options::="--force-confold" ${PM_OPTIONS} install "$@"
         else
-            if  ${XFCE4}; then 
-                echo "keyboard-configuration  keyboard-configuration/layout  select  Russian" | chroot_exec debconf-set-selections
-            fi
             # shellcheck disable=SC2086
             chroot_exec apt-get -y ${PM_OPTIONS} install "$@"
         fi
     fi
 }
+
+if  ${XFCE4}; then 
+    echo "keyboard-configuration  keyboard-configuration/layout  select  Russian" | chroot_exec debconf-set-selections
+fi
 
 # Removes the specified packages with their configuration files from the chroot
 # environment.
