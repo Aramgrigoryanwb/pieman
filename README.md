@@ -291,10 +291,6 @@ Specifies the projects location. By default, the directory named `build` is crea
 
 Restricts Pieman to only creating a chroot environment based on the operating system specified via `OS`. The chroot environment is stored in `build/${PROJECT_NAME}/chroot` and can be used immediately or later to reduce the time of building images. See `BASE_DIR`.
 
-##### XFCE4="false"
-
-Specifies whether to install xfce4 with lxdm. Available only on Ubuntu 18.04 Bionic Beaver arhmf or arm64.
-
 ##### LOCALE="en_US.UTF-8"
 
 Specifies the locale.
@@ -320,6 +316,10 @@ Note that the default codename belongs to the latest toolset which supports all 
 ##### TOOLSET_DIR="${PIEMAN_DIR}/toolset"
 
 Specifies the directory which contains the tools necessary for creating chroot environments based on Alpine Linux and different Debian-based distributions. The toolset consists of [debootstrap](https://wiki.debian.org/Debootstrap) and [apk.static](https://wiki.alpinelinux.org/wiki/Alpine_Linux_package_management).
+
+##### XFCE4="false"
+
+Specifies whether to install xfce4 with lxdm. Available only on Ubuntu 18.04 Bionic Beaver arhmf or arm64.
 
 ---
 
