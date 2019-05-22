@@ -119,7 +119,7 @@ if [ ! -z "${includes}" ]; then
     done
 fi
 
-if ${DESKOP_ENV}; then 
+if ${XFCE4}; then 
 {
     add_package_to_includes xfce4
     add_package_to_includes lxdm
