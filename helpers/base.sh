@@ -158,7 +158,7 @@ check_ownership_format() {
 check_pieman_version() {
     local pieman_version=(0 0)
     local output=""
-    
+
     output="$(${PYTHON} -c "import pieman; print(pieman.__version__)" 2>&1)"
     # Pieman package 0.1 doesn't have the __version__ module attribute, so we
     # have to provide for backwards compatibility.

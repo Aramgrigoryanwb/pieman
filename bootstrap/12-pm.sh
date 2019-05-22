@@ -120,11 +120,10 @@ if [ ! -z "${includes}" ]; then
 fi
 
 if ${XFCE4}; then 
-{
     add_package_to_includes xfce4
     add_package_to_includes lxdm
     add_package_to_includes xfce4-goodies
-}
+    configure_keyboard_configuration
 fi
 
 if [ ! -z ${INCLUDES} ]; then
