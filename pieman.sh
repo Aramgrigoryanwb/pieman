@@ -234,6 +234,11 @@ if ${ENABLE_MENDER}; then
     fi
 fi
 
+if [ "${OS}" != "ubuntu-bionic-armhf" ] || [ "${OS}" != "ubuntu-bionic-arm64" ]; then
+    fatal "Cannot create image with XFCE4. Check support OS."
+    exit 1
+fi
+
 choose_user_mode_emulation_binary
 
 init_debootstrap
