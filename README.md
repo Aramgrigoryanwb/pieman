@@ -293,7 +293,7 @@ Restricts Pieman to only creating a chroot environment based on the operating sy
 
 ##### XFCE4="false"
 
-If this parameter is set to true, then the image will be compiled together with xfce4 and lxdm. If the parameter is set to false, the desktop environment will not be set.
+If this parameter is set to true, then the image will be compiled together with xfce4 and lxdm. If the parameter is set to false, the desktop environment will not be set. At the moment, the ability to create an image with XFCE is only on Ubuntu 18.04.
 
 ##### LOCALE="en_US.UTF-8"
 
