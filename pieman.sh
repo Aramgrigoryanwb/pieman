@@ -209,6 +209,11 @@ check_required_files
 
 split_os_name_into_pieces
 
+if [ "${OS}" == "alpine-3.9-armhf" ] || [ "${OS}" == "debian-buster-armhf" ] || [ "${OS}" == "devuan-jessie-armhf" ] || [ "${OS}" == "kali-rolling-armhf" ] || [ ${OS} == "raspbian-stretch-armhf" ] || [ ${OS} == "ubuntu-xenial-armhf" ]; then
+    fatal "Cannot create image with XFCE4. Check support OS."
+    exit 1
+fi
+
 info "checking toolset ${TOOLSET_CODENAME}"
 if [ ! -d "${TOOLSET_FULL_PATH}" ]; then
     info "building toolset ${TOOLSET_CODENAME} since it does not exist"
@@ -232,11 +237,6 @@ if ${ENABLE_MENDER}; then
               "DEVICE=rpi-3-b is supported only."
         exit 1
     fi
-fi
-
-if [ "${OS}" != "ubuntu-bionic-armhf" ] || [ "${OS}" != "ubuntu-bionic-arm64" ]; then
-    fatal "Cannot create image with XFCE4. Check support OS."
-    exit 1
 fi
 
 choose_user_mode_emulation_binary
